@@ -4,6 +4,10 @@ A password input type with a button to toggle password visibility.
 
 > Maintained by [Toby Evans](https://github.com/tobz-nz/x-password).
 
+## Demo
+
+> [Check it live](http://tobz-nz.github.io/x-password/demo.html).
+
 ## Usage
 
 1. Import Web Components' polyfill:
