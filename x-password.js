@@ -30,6 +30,9 @@ customElements.define('x-password', class extends HTMLInputElement {
                     this.setCustomValidity('Passwords do not match')
                 }
             })
+
+            // set initial validity message
+            this.dispatchEvent(new Event('blur'))
         }
 
         this.addEventListener('mousedown', () => {
