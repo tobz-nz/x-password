@@ -1,5 +1,3 @@
-# &lt;x-password&gt;
-
 A password input natively enhanced via a Custom Element (Web Component).
 
 It adds the ability to toggle visibility and validation to confirm it matches the value of another field
@@ -11,7 +9,7 @@ It adds the ability to toggle visibility and validation to confirm it matches th
 ## Usage
 
 ```html
-<script src="" type="module"></script>
+<script src="https://tobz-nz.github.io/x-password/x-password.js" type="module"></script>
 
 <form onsubmit="return false">
     <label for="password">Password</label>
@@ -20,7 +18,7 @@ It adds the ability to toggle visibility and validation to confirm it matches th
     <br>
 
     <label for="password_confirm">Confirm Password</label>
-    <input type="password" name="password_confirm" id="password_confirm" is="x-password" confirm-target="password">
+    <input is="x-password" name="password_confirm" id="password_confirm" confirm-target="password">
 
     <br>  
   

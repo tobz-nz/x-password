@@ -1,6 +1,6 @@
 customElements.define('x-password', class extends HTMLInputElement {
     static get observedAttributes() {
-        return ["visible"]
+        return ['visible']
     }
 
     constructor() {
@@ -18,6 +18,10 @@ customElements.define('x-password', class extends HTMLInputElement {
     }
 
     connectedCallback() {
+        if (!this.getAttribute('type')) {
+            this.setAttribute('type', 'password')
+        }
+
         if (this.hasAttribute('confirm-target')) {
             const confirmTarget = document.getElementById(this.getAttribute('confirm-target'))
 
