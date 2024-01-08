@@ -1,6 +1,6 @@
 # &lt;x-password&gt;
 
-A password input naticely enhansed via a Custom Element (Web Component).
+A password input natively enhanced via a Custom Element (Web Component).
 
 It adds the ability to toggle visibility and validation to confirm it matches the value of another field
 
