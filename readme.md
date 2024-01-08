@@ -1,8 +1,8 @@
 # &lt;x-password&gt;
 
-A password input type with a button to toggle password visibility.
+A password input naticely enhansed via a Custom Element (Web Component).
 
-> Maintained by [Toby Evans](https://github.com/tobz-nz/x-password).
+It adds the ability to toggle visibility and validation to confirm it matches the value of another field
 
 ## Demo
 
@@ -10,43 +10,35 @@ A password input type with a button to toggle password visibility.
 
 ## Usage
 
-1. Import Web Components' polyfill:
+```html
+<script src="" type="module"></script>
 
-	```html
-	<script src="//cdnjs.cloudflare.com/ajax/libs/polymer/0.0.20130711/polymer.min.js"></script>
-	```
+<form onsubmit="return false">
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password">
 
-2. Import Custom Element:
+    <br>
 
-	```html
-	<link rel="import" href="src/x-password.html">
-	```
+    <label for="password_confirm">Confirm Password</label>
+    <input type="password" name="password_confirm" id="password_confirm" is="x-password" confirm-target="password">
 
-3. Start using it!
-
-	```html
-	<x-password></x-password>
-	```
+    <br>  
+  
+    <button>Go</button>
+</form>
+```
 
 ## Options
 
 Attribute  | Options                   | Default             | Description
 ---        | ---                       | ---                 | ---
-`name`  | *string*                | null            | set the name of the field
-`value`  | *string*                | null            | set the value of the field
-`show`  | *boolean*             | false            | set the password as visible
-
-
-## Contributing
-
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -m 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
+`visible`  | *string*                  | null                | set the value to visible (plain text)
+`confirm-target`  | *string*           | null                | the ID of another field to match
 
 ## History
 
+* v0.2 Jan 9, 2024
+	* re-release as fully native web-component
 * v0.1 Feb 5, 2014
 	* initial release
 
