@@ -2,7 +2,9 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
+        <link rel="shortcut icon" href="eye.svg" type="image/svg+xml">
         <title>X Password</title>
+        <meta name="description" content="A custom element for password inputs" />
         <meta name="viewport" content="width=device-width" />
         <script src="./x-password.js" type="module"></script>
     </head>
@@ -11,17 +13,17 @@
 
         <form action="#">
             <label for="password">Password</label>
-            <input autocomplete="none" data-1p-ignore type="password" name="password" id="password" value="password">
+            <input data-1p-ignore type="password" name="password" id="password" value="password">
 
             <br>
 
             <label for="password_confirm">Confirm Password</label>
-            <input autocomplete="none" data-1p-ignore name="password_confirm" id="password_confirm" is="x-password" value="hidden" confirm-target="password">
+            <x-password data-1p-ignore name="password_confirm" id="password_confirm" is="x-password" placeholder="type: 'password' to confirm" value="" confirm-target="password" required></x-password>
 
             <br>
 
             <label for="password_confirm">Visible Password</label>
-            <input autocomplete="none" data-1p-ignore name="visibile_password" id="visibile_password" is="x-password" value="not hidden" visible>
+            <x-password data-1p-ignore name="visibile_password" id="visibile_password" value="not hidden" visible></x-password>
 
             <br>
 
