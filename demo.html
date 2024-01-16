@@ -5,6 +5,15 @@
         <title>X Password</title>
         <meta name="viewport" content="width=device-width" />
         <script src="./x-password.js" type="module"></script>
+        <style>
+            .flex {
+                display: inline flex;
+                gap: 1ch;
+            }
+            .items-center {
+                align-items: center;
+            }
+        </style>
     </head>
 
     <body>
@@ -16,12 +25,18 @@
             <br>
 
             <label for="password_confirm">Confirm Password</label>
-            <input autocomplete="none" data-1p-ignore name="password_confirm" id="password_confirm" is="x-password" value="hidden" confirm-target="password">
+            <div class="flex items-center">
+                <input autocomplete="none" data-1p-ignore name="password_confirm" id="password_confirm" is="x-password" value="hidden" confirm-target="password">
+                <button type="button" onclick="document.getElementById('password_confirm').toggleAttribute('visible')">Toggle Visibility</button>
+            </div>
 
             <br>
 
             <label for="password_confirm">Visible Password</label>
-            <input autocomplete="none" data-1p-ignore name="visibile_password" id="visibile_password" is="x-password" value="not hidden" visible>
+            <div class="flex items-center">
+                <input autocomplete="none" data-1p-ignore name="visibile_password" id="visibile_password" is="x-password" value="not hidden" visible>
+                <button type="button" onclick="document.getElementById('visibile_password').toggleAttribute('visible')">Toggle Visibility</button>
+            </div>
 
             <br>
 

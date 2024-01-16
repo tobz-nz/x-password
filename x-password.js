@@ -38,12 +38,18 @@ customElements.define('x-password', class extends HTMLInputElement {
             // set initial validity message
             this.dispatchEvent(new Event('blur'))
         }
+    }
 
-        this.addEventListener('mousedown', () => {
-            if (document.activeElement == this) {
-                this.toggleAttribute('visible')
-            }
-        })
+    get visible() {
+        return this.hasAttribute('visible')
+    }
+
+    set visible(value) {
+        if (value) {
+            this.setAttribute('visible', '')
+        } else {
+            this.removeAttribute('visible')
+        }
     }
 
     attributeChangedCallback(property, oldValue, newValue) {

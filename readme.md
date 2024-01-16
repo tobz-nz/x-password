@@ -19,6 +19,7 @@ It adds the ability to toggle visibility and validation to confirm it matches th
 
     <label for="password_confirm">Confirm Password</label>
     <input is="x-password" name="password_confirm" id="password_confirm" confirm-target="password">
+    <button type="button" onclick="document.getElementById('password_confirm').toggleAttribute('visible')">Toggle Visibility</button>
 
     <br>  
   
