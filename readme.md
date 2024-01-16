@@ -31,8 +31,8 @@ It adds the ability to toggle visibility and validation to confirm it matches th
 
 Attribute  | Options                   | Default             | Description
 ---        | ---                       | ---                 | ---
-`visible`  | *string*                  | null                | set the value to visible (plain text)
-`confirm-target`  | *string*           | null                | the ID of another field to match
+`visible`  | -                         | null                | Set the value to visible (plain text)
+`confirm-target`  | *string*           | null                | The ID of another field to match
 
 ## History
 
